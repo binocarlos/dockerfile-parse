@@ -1,0 +1,27 @@
+{
+  "name": "dockerfile-parse",
+  "version": "0.0.0",
+  "description": "Parse a Dockerfile into a POJO",
+  "main": "index.js",
+  "scripts": {
+    "test": "set -e; for t in test/*.js; do node $t; done"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/binocarlos/dockerfile-parse.git"
+  },
+  "keywords": [
+    "docker",
+    "dockerfile",
+    "parse"
+  ],
+  "author": "Kai Davenport",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/binocarlos/dockerfile-parse/issues"
+  },
+  "homepage": "https://github.com/binocarlos/dockerfile-parse",
+  "devDependencies": {
+    "tape": "^2.12.3"
+  }
+}
