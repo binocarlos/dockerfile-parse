@@ -1,6 +1,8 @@
 dockerfile-parse
 ================
 
+[![Travis](http://img.shields.io/travis/binocarlos/dockerfile-parse.svg?style=flat)](https://travis-ci.org/binocarlos/dockerfile-parse)
+
 Parse a Dockerfile into a POJO
 
 ## install
