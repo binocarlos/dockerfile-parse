@@ -30,6 +30,8 @@ RUN cd /srv/app && make build2
 ENTRYPOINT node index.js
 ```
 
+Lets parse it into a JavaScript object to see what it says:
+
 ```js
 var fs = require('fs')
 var parse = require('docker')
