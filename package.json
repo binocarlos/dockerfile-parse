@@ -1,6 +1,6 @@
 {
   "name": "dockerfile-parse",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Parse a Dockerfile into a POJO",
   "main": "index.js",
   "scripts": {
