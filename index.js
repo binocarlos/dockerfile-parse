@@ -34,6 +34,9 @@ module.exports = function(dockerFile){
 			cmd = command.replace(/\s+/, '').toLowerCase()
 			return ''
 		})
+		if(!cmd || !cmd.match(/\w/)){
+			return
+		}
 		if(filters[cmd]){
 			line = filters[cmd](line)
 		}
