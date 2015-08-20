@@ -43,6 +43,11 @@ module.exports = function(dockerFile){
 		if(arrayFieldMap[cmd]){
 			pojo[cmd].push(line)
 		}
+		if(cmd === 'env') {
+			var s = line.split(' ')
+			if (!pojo.env) pojo.env = {}
+			pojo.env[s[0]] = s[1]
+		}
 		else{
 			pojo[cmd] = line
 		}
