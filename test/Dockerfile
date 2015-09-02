@@ -4,6 +4,8 @@ RUN cd /srv/app && npm install
 RUN cd /srv/app && make build
 WORKDIR /srv/app
 VOLUME /srv/data
+ENV VAR1=10
+ENV VAR2=20 VAR3=30
 ADD /my/source /src/dest
 EXPOSE 80
 EXPOSE 9989

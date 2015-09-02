@@ -21,6 +21,11 @@ tape('should parse a Dockerfile', function (t) {
       'cd /srv/app && make build',
       'cd /srv/app && make build2'
     ],
+    env:{
+      VAR1:'10',
+      VAR2:'20',
+      VAR3:'30'
+    },
     from:'quarry/monnode',
     workdir:'/srv/app',
     entrypoint:'node index.js'
