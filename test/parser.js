@@ -24,7 +24,8 @@ tape('should parse a Dockerfile', function (t) {
     env:{
       VAR1:'10',
       VAR2:'20',
-      VAR3:'30'
+      VAR3:'30',
+      VAR4:'20'
     },
     from:'quarry/monnode',
     workdir:'/srv/app',
