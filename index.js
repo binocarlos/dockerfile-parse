@@ -1,6 +1,6 @@
 module.exports = function(dockerFile){
 
-	var arrayFields = ['add', 'expose', 'volume', 'run']
+        var arrayFields = ['add', 'expose', 'volume', 'run', 'workdir']
 	var arrayFieldMap = {}
 	var filters = {
 		add:function(val){
@@ -26,10 +26,16 @@ module.exports = function(dockerFile){
 		arrayFieldMap[f] = true
 	})
 
+        dockerFile = dockerFile.replace(/\\\n/g, '')
 	var lines = dockerFile.split(/\r?\n/) || []
 
 	lines.forEach(function(line){
 		var cmd = null
+
+                if (!line.trim() || line[0] === '#') {
+                        return
+                }
+
 		line = line.replace(/^\w+ /, function(command){
 			cmd = command.replace(/\s+/, '').toLowerCase()
 			return ''
